@@ -1,4 +1,4 @@
-// const {ConnectionString} = require('connection-string');
+const {ConnectionString} = require('connection-string');
 let settings = {
   "client": "postgres",
   "database": "strapi",
@@ -15,7 +15,7 @@ function getConnection(parsed) {
       host: parsed.hostname || process.env.DATABASE_HOST || '127.0.0.1',
       port: parsed.port || process.env.DATABASE_PORT || 27017,
       database: database || process.env.DATABASE_NAME || 'strapi',
-      username: parsed.user || rocess.env.DATABASE_USERNAME || '',
+      username: parsed.user || process.env.DATABASE_USERNAME || '',
       password: parsed.password || process.env.DATABASE_PASSWORD || '',
       ssl: process.env.DATABASE_SSL || false
   };
