@@ -1,5 +1,12 @@
-const {ConnectionString} = require('connection-string');
-let settings;
+// const {ConnectionString} = require('connection-string');
+let settings = {
+  "client": "postgres",
+  "database": "strapi",
+  "host": "127.0.0.1",
+  "port": 5432,
+  "username": "",
+  "password": ""
+};
 
 function getConnection(parsed) {
   const database = parsed.path && parsed.path[0];
@@ -22,8 +29,10 @@ if (process.env.DATABASE_URL) {
 module.exports = {
   defaultConnection: 'default',
   connections: {
-    connector: 'strapi-hook-bookshelf',
-    settings,
-    options: {},
+    default: {
+      connector: 'strapi-hook-bookshelf',
+      settings,
+      options: {},
+    }
   },
 };
