@@ -1,30 +1,47 @@
 {
-  "name": "strapi-heroku-app",
+  "name": "strapi-asd",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application.",
-  "main": "./server.js",
+  "description": "A Strapi application",
   "scripts": {
-    "setup": "cd admin && npm run setup",
-    "start": "node server.js",
-    "strapi": "node_modules/strapi/bin/strapi.js",
-    "lint": "node_modules/.bin/eslint api/**/*.js config/**/*.js plugins/**/*.js"
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "lint": "eslint ."
   },
   "devDependencies": {
-    "babel-eslint": "^7.1.1",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb": "^13.0.0",
-    "eslint-plugin-import": "^2.11.0",
-    "eslint-plugin-react": "^7.7.0",
-    "strapi-hook-mongoose": "^3.0.0-next.24"
+    "babel-eslint": "^10.0.0",
+    "eslint": "^6.0.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-react": "^7.14.0"
   },
   "dependencies": {
     "lodash": "^4.17.5",
-    "strapi": "^3.0.0-next.24",
-    "strapi-hook-bookshelf": "^3.0.0-next.24"
+    "strapi": "3.0.0-beta.14",
+    "strapi-admin": "3.0.0-beta.14",
+    "strapi-utils": "3.0.0-beta.14",
+    "strapi-plugin-settings-manager": "3.0.0-beta.14",
+    "strapi-plugin-content-type-builder": "3.0.0-beta.14",
+    "strapi-plugin-content-manager": "3.0.0-beta.14",
+    "strapi-plugin-users-permissions": "3.0.0-beta.14",
+    "strapi-plugin-email": "3.0.0-beta.14",
+    "strapi-plugin-upload": "3.0.0-beta.14",
+    "strapi-hook-bookshelf": "3.0.0-beta.14",
+    "strapi-hook-knex": "3.0.0-beta.14",
+    "knex": "latest",
+    "pg": "latest"
+  },
+  "author": {
+    "name": "A Strapi developer"
   },
   "strapi": {
-    "packageManager": "npm"
+    "uuid": "d0495f0f-3549-4099-9fb5-e49ada3d6d1b"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
   },
   "license": "MIT"
 }

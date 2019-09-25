@@ -2,20 +2,16 @@
   "defaultConnection": "default",
   "connections": {
     "default": {
-      "connector": "strapi-hook-mongoose",
+      "connector": "strapi-hook-bookshelf",
       "settings": {
-        "client": "mongo",
+        "client": "postgres",
+        "database": "strapi",
         "host": "127.0.0.1",
-        "srv": false,
-        "port": 27017,
-        "database": "strapi-heroku-app",
+        "port": 5432,
         "username": "",
         "password": ""
       },
-      "options": {
-        "authenticationDatabase": "",
-        "ssl": false
-      }
+      "options": {}
     }
   }
 }
